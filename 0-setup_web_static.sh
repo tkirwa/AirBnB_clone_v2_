@@ -12,8 +12,8 @@ sudo mkdir -p /data/web_static/releases/test/
 echo "Holberton School" | sudo tee /data/web_static/releases/test/index.html > /dev/null
 sudo ln -sf /data/web_static/releases/test/ /data/web_static/current
 
-# The command chown -hR is used to change the ownership of files and directories recursively
-sudo chown -hR ubuntu:ubuntu /data/
+# The command chown -R is used to change the ownership of files and directories recursively
+sudo chown -R ubuntu:ubuntu /data/
 
 # configure nginx
 sudo sed -i '44i \\n\tlocation /hbnb_static {\n\t\talias /data/web_static/current/;\n\t}' /etc/nginx/sites-available/default
